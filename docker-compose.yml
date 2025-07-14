@@ -17,7 +17,7 @@ services:
       - ./config.yml:/app/config.yaml:ro
     command: ["--config", "/app/config.yaml", "--port", "4000", "--host", "0.0.0.0"]
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://0.0.0.0:4000/health"]
+      test: ["CMD", "python", "-c", "import requests,os,sys; r=requests.get('http://localhost:4000/v1/models', headers={'Authorization': f'Bearer {os.environ.get(\"LITELLM_MASTER_KEY\", \"\")}'}); sys.exit(0 if r.status_code==200 else 1)"]
       interval: 30s
       timeout: 10s
       retries: 3
