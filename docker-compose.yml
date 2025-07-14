@@ -13,6 +13,8 @@ services:
       - DATABASE_URL=postgresql://litellm:${POSTGRES_PASSWORD}@postgres:5432/litellm
     env_file:
       - .env
+    volumes:
+      - ./config.yml:/app/config.yaml:ro
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://0.0.0.0:4000/health"]
       interval: 30s
