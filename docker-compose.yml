@@ -25,14 +25,6 @@ services:
       
     networks:
       - dokploy-network
-    
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.litellm.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.litellm.tls=true"
-      - "traefik.http.routers.litellm.tls.certresolver=letsencrypt"
-      - "traefik.http.services.litellm.loadbalancer.server.port=4000"
-      - "traefik.docker.network=dokploy-network"
       
   # prometheus:
   #   image: prom/prometheus
