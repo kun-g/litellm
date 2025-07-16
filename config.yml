@@ -9,3 +9,43 @@ model_list:
       model: deepseek/deepseek-chat
       api_base: https://api.deepseek.com
       api_key: "os.environ/DEEPSEEK_API_KEY"
+  - model_name: kimi-latest-8k
+    litellm_params:
+      model: moonshot/kimi-latest-8k
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-latest-32k
+    litellm_params:
+      model: moonshot/kimi-latest-32k
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-latest-128k
+    litellm_params:
+      model: moonshot/kimi-latest-128k
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-k2
+    litellm_params:
+      model: moonshot/kimi-k2-0711-preview
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-v1-8k-vision-preview
+    litellm_params:
+      model: moonshot/kimi-v1-8k-vision-preview
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-v1-32k-vision-preview
+    litellm_params:
+      model: moonshot/kimi-v1-32k-vision-preview
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-v1-128k-vision-preview
+    litellm_params:
+      model: moonshot/kimi-v1-128k-vision-preview
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
+  - model_name: kimi-thinking-preview
+    litellm_params:
+      model: moonshot/kimi-thinking-preview
+      api_base: https://api.moonshot.cn/v1
+      api_key: "os.environ/MOONSHOT_API_KEY"
