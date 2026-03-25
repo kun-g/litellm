@@ -1,9 +1,9 @@
-# LiteLLM v1.74.3.rc.2 - 简化版 Dokploy 部署
+# LiteLLM v1.82.3-stable.patch.2 - 简化版 Dokploy 部署
 version: '3.8'
 
 services:
   litellm:
-    image: ghcr.io/berriai/litellm:v1.81.12-stable
+    image: ghcr.io/berriai/litellm:main-v1.82.3-stable.patch.2
     container_name: main-litellm
     restart: unless-stopped
     ports:
